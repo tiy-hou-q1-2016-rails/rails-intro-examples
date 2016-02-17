@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simplerouter</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <header>
+    <h2>Yolo</h2>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/yolo">Yolo</a>
+      <a href="/gifs">Gifs</a>
+    </nav>
+  </header>
+
+  <article>
+    <%= yield %>
+
+    <hr>
+
+    <%= debug params %>
+  </article>
+
+  <footer>
+    Copyright JWO.
+  </footer>
+</body>
+</html>

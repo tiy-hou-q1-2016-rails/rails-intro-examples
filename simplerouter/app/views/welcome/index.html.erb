@@ -1,0 +1,14 @@
+
+<%= Time.now %>
+
+<blockquote>
+  <%= @quote %>
+</blockquote>
+
+<h1>Contacts</h1>
+
+<ul>
+  <% @contacts.each do |contact| %>
+    <li><a href="/contacts/<%= contact %>"><%= contact %></a></li>
+  <% end %>
+</ul>

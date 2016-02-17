@@ -1,0 +1,25 @@
+$main-color: #E67E22;
+header {
+  background: $main-color;
+  padding: 0 30px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid darken($main-color, 20%);
+  display: flex;
+  align-items: center;
+  nav{
+    margin-left: 30px;
+    a{
+    }
+  }
+}
+
+article {
+  width: 60em;
+  margin: 0 auto;
+}
+
+footer {
+  padding-top: 20em;
+  width: 60em;
+  margin: 0 auto;
+}
