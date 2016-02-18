@@ -1,0 +1,10 @@
+<h1><%= @name %></h1>
+
+<ul>
+
+  <% @labs.each do |lab| %>
+    <li>
+      <a href="/labs/<%=lab.id%>"><%= lab.name %> - <%= lab.id %></a>
+    </li>
+  <% end %>
+</ul>
