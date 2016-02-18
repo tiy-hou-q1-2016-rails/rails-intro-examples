@@ -1,0 +1,25 @@
+<h1>Contacts</h1>
+
+<form class="" action="#" method="get">
+  <div class="form-group">
+    <label for="search_text">Search Text</label>
+    <input type="text" name="search_text" value="" class="form-control">
+  </div>
+</form>
+
+<% if @contacts.empty? %>
+  <div class="alert alert-info">
+    <em>No Contacts Found for "<%= params[:search_text] %>"</em>
+  </div>
+
+<% else %>
+  <p>
+    <em><%= pluralize @contacts.count, 'contact' %> found</em>
+  </p>
+<% end %>
+
+<% @contacts.each do |contact| %>
+  <li>
+    <%= link_to highlight(contact.full_name, params[:search_text]), "/contacts/#{contact.id}"%>
+  </li>
+<% end %>
