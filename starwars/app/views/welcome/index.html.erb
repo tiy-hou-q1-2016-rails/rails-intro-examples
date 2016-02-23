@@ -1,0 +1,40 @@
+<h1>Characters</h1>
+
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>
+        Character
+      </th>
+      <th>
+        Planet
+      </th>
+      <th>
+        Vehicle
+      </th>
+      <th>
+        Quote
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @characters.each do |character| %>
+      <tr>
+        <td>
+          <%= character.character %>
+        </td>
+        <td>
+          <%= character.planet %>
+        </td>
+        <td>
+          <%= character.vehicle %>
+        </td>
+        <td>
+          <blockquote >
+            <%= character.quote %>
+          </blockquote>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
